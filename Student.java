@@ -2,13 +2,13 @@ class Student {
 	String index;
 	String firstName;
 	String lastName;
-	int[] Grades;
+	int[] grades;
 
-	public Student(String index, String firstName, String lastName, int[] labPoints) {
+	public Student(String index, String firstName, String lastName, int[] grades) {
 		this.index = index;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.Grades = Grades;
+		this.grades = grades;
 
 		public String getIndex() {
 			return index;
@@ -35,23 +35,31 @@ class Student {
 		}
 
 		public int[] getGrades() {
-			return Grades;
+			return grades;
 		}
 
 		public void setGrades(int[] grades) {
-			Grades = grades;
+			grades = grades;
 		}
 
+		public double getAverage() {
+			int a=0;
+			for (int p: grades) {
+				a+=p;
+			}
 
+			return a/grades.length;
+		}
 
-
-	public double getAverage() {
-		//TODO
-	}
-
-	public int ECTSCredits() {
-		//TODO
-	}
+		public int ECTSCredits() {
+			int pom = 0;
+			if (grades.length > 6)
+			{
+				pom++
+			}
+			pom*6;
+			return pom;
+		}
 }
 
 
